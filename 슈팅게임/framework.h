@@ -27,6 +27,7 @@
 #include "ObjectManager.h"
 #include "GameBG.h"
 #include "Player.h"
+#include "PlayerLaser.h"
 
 #define WIDTH 480
 #define HEIGHT 800

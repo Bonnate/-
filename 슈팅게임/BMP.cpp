@@ -16,22 +16,22 @@ void Bitmap::readBMP(const char* fileName, Image* img)
 		fread(&fileHeader, sizeof(fileHeader), 1, stream);
 
 		//----비트맵 파일 헤더...구조체...출력하기-----//
-		printf("-------비트맵 파일 헤더 구조체------\n");
-
-		printf("bfType 0X%X\n", fileHeader.bfType); //파일안에서..bmp파일 확인 코드(매직코드)
-		printf("bfSize %d\n", fileHeader.bfSize); //파일 크기
-		printf("bfReserved1 %d\n", fileHeader.bfReserved1); //나중사용 변수들
-		printf("bfReserved2 %d\n", fileHeader.bfReserved2); //나중사용 변수들
-		printf("bfOffBits   %d\n", fileHeader.bfOffBits);   //비트맵데이타(픽셀데이타)의 저장위치(간격)
+		//printf("-------비트맵 파일 헤더 구조체------\n");
+		//
+		//printf("bfType 0X%X\n", fileHeader.bfType); //파일안에서..bmp파일 확인 코드(매직코드)
+		//printf("bfSize %d\n", fileHeader.bfSize); //파일 크기
+		//printf("bfReserved1 %d\n", fileHeader.bfReserved1); //나중사용 변수들
+		//printf("bfReserved2 %d\n", fileHeader.bfReserved2); //나중사용 변수들
+		//printf("bfOffBits   %d\n", fileHeader.bfOffBits);   //비트맵데이타(픽셀데이타)의 저장위치(간격)
 
 		//비트맵인포 헤더..구조체 읽어오기//
 		fread(&infoHeader, sizeof(infoHeader), 1, stream);
 
 		//---비트맵 인포 헤더..구조체...출력하가---//
-		printf("------비트맵 인포 헤더..구조체 ------\n");
-		printf("이미지 크기 (%d x %d)\n", infoHeader.biWidth, infoHeader.biHeight);
-		printf("비트 수준  %d\n", infoHeader.biBitCount);
-		printf("이미지 로드 배열 크기 %d\n", infoHeader.biSizeImage);
+		//printf("------비트맵 인포 헤더..구조체 ------\n");
+		//printf("이미지 크기 (%d x %d)\n", infoHeader.biWidth, infoHeader.biHeight);
+		//printf("비트 수준  %d\n", infoHeader.biBitCount);
+		//printf("이미지 로드 배열 크기 %d\n", infoHeader.biSizeImage);
 
 		//픽셀데이타 배열 읽어오기//
 		int length = infoHeader.biSizeImage / 4;

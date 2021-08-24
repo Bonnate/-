@@ -6,6 +6,8 @@ class Player : public Sprite
 {
 private:
 	float speed;
+	float fireTimer;
+	float fireDelay;
 
 public:
 	Player();

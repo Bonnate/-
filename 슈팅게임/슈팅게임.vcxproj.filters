@@ -75,7 +75,7 @@
     <ClInclude Include="슈팅게임.h">
       <Filter>소스 파일\__MAIN</Filter>
     </ClInclude>
-    <ClInclude Include="Laser.h">
+    <ClInclude Include="PlayerLaser.h">
       <Filter>헤더 파일\object</Filter>
     </ClInclude>
   </ItemGroup>
@@ -116,7 +116,7 @@
     <ClCompile Include="슈팅게임.cpp">
       <Filter>소스 파일\__MAIN</Filter>
     </ClCompile>
-    <ClCompile Include="Laser.cpp">
+    <ClCompile Include="PlayerLaser.cpp">
       <Filter>소스 파일\object</Filter>
     </ClCompile>
   </ItemGroup>

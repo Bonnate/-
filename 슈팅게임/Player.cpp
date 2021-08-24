@@ -3,11 +3,15 @@
 Player::Player() : Sprite("", "", true, 0, 0)
 {
 	this->speed = 200.0f;
+	this->fireTimer = .0f;
+	this->fireDelay = .2f;
 }
 
 Player::Player(float px, float py) : Sprite("", "", true, px, py)
 {
 	this->speed = 200.0f;
+	this->fireTimer = .0f;
+	this->fireDelay = .2f;
 }
 
 Player::~Player()
@@ -23,6 +27,16 @@ void Player::start()
 void Player::update()
 {
 	GetKeytoMove();
+	
+	fireTimer += Time::deltaTime;
+	
+	if(fireTimer >= fireDelay)
+		if (Input::getKey("space") || Input::getKeyDown("space"))
+		{
+			instantiate(new PlayerLaser(getPx() + 32, getPy() - 20));
+
+			fireTimer = .0f;
+		}
 }
 
 void Player::GetKeytoMove()
@@ -62,8 +76,5 @@ void Player::GetKeytoMove()
 
 void Player::GetKeytoShoot()
 {
-	if (Input::getKey("z") || Input::getKeyDown("z"))
-	{
 
-	}
 }

@@ -147,7 +147,7 @@
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="graphic.h" />
     <ClInclude Include="Input.h" />
-    <ClInclude Include="Laser.h" />
+    <ClInclude Include="PlayerLaser.h" />
     <ClInclude Include="ObjectManager.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Random.h" />
@@ -164,7 +164,7 @@
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="graphic.cpp" />
     <ClCompile Include="Input.cpp" />
-    <ClCompile Include="Laser.cpp" />
+    <ClCompile Include="PlayerLaser.cpp" />
     <ClCompile Include="ObjectManager.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Random.cpp" />
