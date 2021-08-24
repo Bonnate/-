@@ -2,6 +2,7 @@
 //
 
 #include "framework.h"
+
 #include "슈팅게임.h"
 
 #define MAX_LOADSTRING 100
