@@ -1,13 +1,13 @@
 #pragma once
 
-typedef unsigned int uint;
+typedef unsigned int uint;;;
 
 struct Image
 {
-	//·ÎµåÀÌ¹ÌÁö º¯¼öµé
-	int width;			//ÀÌ¹ÌÁö °¡·Î 
-	int height;			//ÀÌ¹ÌÁö ¼¼·Î
-	uint* argb;  //ÀÌ¹ÌÁö ÇÈ¼¿µ¥ÀÌÅ¸ ÀúÀå(µ¿ÀûÇÒ´ç)¹è¿­
+	//ë¡œë“œì´ë¯¸ì§€ ë³€ìˆ˜ë“¤
+	int width;			//ì´ë¯¸ì§€ ê°€ë¡œ 
+	int height;			//ì´ë¯¸ì§€ ì„¸ë¡œ
+	uint* argb;  //ì´ë¯¸ì§€ í”½ì…€ë°ì´íƒ€ ì €ì¥(ë™ì í• ë‹¹)ë°°ì—´
 };
 
 class Bitmap
