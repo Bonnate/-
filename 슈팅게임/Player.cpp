@@ -2,7 +2,7 @@
 
 Player::Player() : Sprite("", "", true, 0, 0)
 {
-	this->speed = 200.0f;
+	this->speed = 200.0f;;
 	this->fireTimer = .0f;
 	this->fireDelay = .2f;
 }
