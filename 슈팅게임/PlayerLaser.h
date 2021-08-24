@@ -6,9 +6,10 @@ class PlayerLaser : public Sprite
 {
 private:
 	float speed;
+	int angle;
 
 public:
-	PlayerLaser(float px, float py);
+	PlayerLaser(float px, float py, int angle = 0);
 	~PlayerLaser();
 
 	void start();

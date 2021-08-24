@@ -21,22 +21,13 @@ Player::~Player()
 
 void Player::start()
 {
-	setImage("Asset/ÇÃ·¹ÀÌ¾î.bmp");
+	setImage("Asset/ÆÒÅÒÀÌµ¿2.bmp", 192, 82, 62, 80);
 }
 
 void Player::update()
 {
 	GetKeytoMove();
-	
-	fireTimer += Time::deltaTime;
-	
-	if(fireTimer >= fireDelay)
-		if (Input::getKey("space") || Input::getKeyDown("space"))
-		{
-			instantiate(new PlayerLaser(getPx() + 32, getPy() - 20));
-
-			fireTimer = .0f;
-		}
+	GetKeytoShoot();
 }
 
 void Player::GetKeytoMove()
@@ -76,5 +67,25 @@ void Player::GetKeytoMove()
 
 void Player::GetKeytoShoot()
 {
+	
 
+	
+		if (Input::getKey("space") || Input::getKeyDown("space"))
+		{
+			fireTimer += Time::deltaTime;
+
+			if (fireTimer >= fireDelay)
+			{
+				instantiate(new PlayerLaser(getPx() + 32, getPy() - 20));
+
+				//instantiate(new PlayerLaser(getPx() + 21, getPy() - 20));
+				//instantiate(new PlayerLaser(getPx() + 41, getPy() - 20));
+
+				//instantiate(new PlayerLaser(getPx() + 21, getPy() - 20, -1));
+				//instantiate(new PlayerLaser(getPx() + 31, getPy() - 20));
+				//instantiate(new PlayerLaser(getPx() + 41, getPy() - 20, +1));
+
+				fireTimer = .0f;
+			}
+		}
 }
