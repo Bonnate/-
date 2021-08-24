@@ -1,6 +1,6 @@
 #pragma once
 
-typedef unsigned int uint;;;
+typedef unsigned int uint;
 
 struct Image
 {
