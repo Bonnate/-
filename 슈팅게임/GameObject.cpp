@@ -78,7 +78,7 @@ void GameObject::translate(float x, float y)
 	py = py + y;
 }
 
-void GameObject::instantiate(GameObject* o)
+void GameObject::instantiate(GameObject* o, int layer)
 {
-	ObjectManager::instantiate(o);
+	ObjectManager::instantiate(o, layer);
 }

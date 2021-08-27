@@ -34,5 +34,5 @@ public:
 
 	void translate(float x, float y);
 
-	void instantiate(GameObject* o);
+	void instantiate(GameObject* o, int layer);
 };

@@ -2,12 +2,12 @@
 
 #include <string>
 
-enum class State { keyUpRep = 0, keyDown = 1, keyDownRep = 2, keyUp = 3 }; //0-놓고 있음, 1-한번 누름 2-누르고 있음, 3-한번놓음
-
 using namespace std;
 
 class Input
 {
+	enum class State { keyUpRep = 0, keyDown = 1, keyDownRep = 2, keyUp = 3 }; //0-놓고 있음, 1-한번 누름 2-누르고 있음, 3-한번놓음
+
 private:
 	static State state[9];
 	static int key[9];

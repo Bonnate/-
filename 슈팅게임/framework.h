@@ -17,17 +17,20 @@
 #include <ctime>
 
 #include "debug.h"
-#include "BMP.h"
+#include "BMP.h"			//이미지를 불러오고 그리는 객체
 #include "graphic.h"
 #include "deltaTime.h"
 #include "Random.h"
 #include "Input.h"
-#include "Sprite.h"
+#include "Sprite.h"			//단일 이미지 로드하는 확장
 #include "GameObject.h"
-#include "ObjectManager.h"
-#include "GameBG.h"
-#include "Player.h"
-#include "PlayerLaser.h"
+#include "ObjectManager.h"	//오브젝트들을 한번에 돌리게 하는 매니저
+#include "GameBG.h"			
+#include "Player.h"			
+#include "PlayerLaser.h"	//이미지가 단일일경우 (레이저,,,)
+#include "Animation.h"		//이미지가 두개 이상인 객체는 애니메이션을 포함//
+#include "Enemy.h"
+#include "EnemyBullet.h"
 
 #define WIDTH 480
 #define HEIGHT 800

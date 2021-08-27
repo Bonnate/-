@@ -50,8 +50,10 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     Time::init();
 
     //배경 및 초기 객체 추가하기//
-    ObjectManager::instantiate(new GameBG());
-    ObjectManager::instantiate(new Player(WIDTH/2 - 34, HEIGHT/2 - 45));
+    ObjectManager::instantiate(new GameBG(), 0);
+    ObjectManager::instantiate(new Player(WIDTH/2 - 34, HEIGHT/2 - 45), 0);
+
+    ObjectManager::instantiate(new Enemy(100, -100), 1);
 
 
 

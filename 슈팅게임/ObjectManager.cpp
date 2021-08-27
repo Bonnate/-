@@ -1,52 +1,58 @@
 #include "framework.h"
 
-vector<GameObject*> ObjectManager::gameObject;
+vector<GameObject*> ObjectManager::gameObject[10];
 
-void ObjectManager::instantiate(GameObject* o)
+void ObjectManager::instantiate(GameObject* o, int layer)
 {
-	gameObject.push_back(o);
+	gameObject[layer].push_back(o);
 	o->start();
 }
 
 void ObjectManager::destroy(GameObject* o)
 {
-	for (int i = 0; i < gameObject.size(); i++)
-	{
-		if (gameObject[i] == o)
+	for(int j = 0; j < 10; ++j)
+		for (int i = 0; i < gameObject[j].size(); i++)
 		{
-			delete gameObject[i];					 //객체 삭제
-			gameObject.erase(gameObject.begin() + i);//stl vector의 주소 저장 공간 삭제
+			if (gameObject[j][i] == o)
+			{
+				delete gameObject[j][i];							//객체 삭제
+				gameObject[j].erase(gameObject[j].begin() + i);		//stl vector의 주소 저장 공간 삭제
 
-			break; //삭제후..반복문 종료
+				return; //삭제후..반복문 종료
+			}
 		}
-	}
 }
 
 void ObjectManager::update()
 {
-	for (int i = 0; i < gameObject.size(); i++)
-	{
-		gameObject[i]->update();
-	}
+	for (int j = 0; j < 10; ++j)
+		for (int i = 0; i < gameObject[j].size(); i++)
+		{
+			gameObject[j][i]->update();
+		}
 }
 
 void ObjectManager::draw()
 {
-	for (int i = 0; i < gameObject.size(); i++)
-	{
-		if (gameObject[i]->getActive() == true)
+	for (int j = 0; j < 10; ++j)
+		for (int i = 0; i < gameObject[j].size(); i++)
 		{
-			gameObject[i]->draw();
+			if (gameObject[j][i]->getActive() == true)
+			{
+				gameObject[j][i]->draw();
+			}
 		}
-	}
 }
 
 void ObjectManager::clear()
 {
-	for (int i = 0; i < gameObject.size(); i++)
+	for (int j = 0; j < 10; ++j)
 	{
-		delete gameObject[i];
-	}
+		for (int i = 0; i < gameObject[j].size(); i++)
+		{
+			delete gameObject[j][i];
+		}
 
-	gameObject.clear();
+		gameObject[j].clear();
+	}
 }

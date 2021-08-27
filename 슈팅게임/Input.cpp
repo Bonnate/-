@@ -1,7 +1,7 @@
 #include "framework.h"
 
 
-State  Input::state[9] = { State::keyUpRep, State::keyUpRep,State::keyUpRep,State::keyUpRep, State::keyUpRep,State::keyUpRep,State::keyUpRep, State::keyUpRep, State::keyUpRep };  //0-놓고 있음, 1-한번 누름 2-누르고 있음, 3-한번놓음
+Input::State  Input::state[9] = { State::keyUpRep, State::keyUpRep,State::keyUpRep,State::keyUpRep, State::keyUpRep,State::keyUpRep,State::keyUpRep, State::keyUpRep, State::keyUpRep };  //0-놓고 있음, 1-한번 누름 2-누르고 있음, 3-한번놓음
 int    Input::key[9]   = { VK_LBUTTON     , VK_RBUTTON     , VK_MBUTTON    ,  VK_LEFT      , VK_RIGHT       , VK_UP         , VK_DOWN        , VK_SPACE       , 'Z' };
 string Input::name[9]  = { "lbutton"      , "rbuttom"      , "mbutton",       "left",           "right",       "up"         ,  "down"        , "space",         "z" };
 
